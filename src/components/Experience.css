@@ -1,0 +1,129 @@
+/* Timeline Container */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+/* List of Companies (Timeline) */
+.timeline-list {
+  width: fit-content;
+  margin-right: 1rem; /* Small gap between list and content */
+}
+
+.timeline-item {
+  font-size: 0.8rem; /* Reduce font size */
+  border-left: #999 solid 2px;
+  padding: 0.8rem 1rem; /* Reduce padding */
+  cursor: pointer;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease;
+  display: inline-block; /* Ensures items line up horizontally */
+}
+
+.timeline-item:hover {
+  border-left: #58dbba solid 2px;
+  box-shadow: 0px 6px 10px rgba(0, 255, 200, 0.4);
+}
+
+.timeline-item.active {
+  border-left: #58dbba solid 2px;
+  color: white;
+}
+
+/* Year */
+.timeline-year {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* Organization Name */
+.timeline-org {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Content Section */
+.timeline-content {
+  width: 50%; /* Keep content width as 50% on larger screens */
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-left: 1.5rem; /* Space between list and content */
+  transition: margin-left 0.3s ease;
+}
+
+.timeline-content h3 {
+  color: #58dbba;
+}
+
+.timeline-location {
+  font-style: italic;
+  color: #999;
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.timeline-content p {
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-list {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-content {
+    width: 85%; /* Adjust content width on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: row; /* Make the list and content appear horizontally */
+    justify-content: center;
+  }
+
+  .timeline-list {
+    width: 100%;
+    display: flex; /* Allow items to be side by side */
+    flex-wrap: wrap; /* Allow items to wrap to new rows */
+    justify-content: space-around; /* Distribute the items evenly */
+    margin-right: 0; /* Remove the right margin */
+  }
+
+  .timeline-item {
+    font-size: 0.9rem;
+    margin: 0.5rem; /* Adjust margins between items */
+    width: 45%; /* Adjust width for items on small screens */
+  }
+
+  .timeline-content {
+    width: 90%; /* Make the content section width adjust on small screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    font-size: 0.9rem;
+    width: 100%; /* Make items take up full width on very small screens */
+    margin: 0.5rem 0;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+    margin-left: 0; /* Align content with list */
+  }
+}

@@ -1,0 +1,102 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between name and links */
+  align-items: center; /* Align items vertically */
+  padding: 1rem 1.5rem; /* Add horizontal padding */
+  background-color: #0D1216;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: #9fabb5 solid 2px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Adjust size for prominence */
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+  color: #58dbba;
+  text-shadow: 0px 6px 10px rgba(0, 255, 200, 0.3);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.navbar li {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  margin-right: 20px;
+  padding: 10px;
+  font-size: 1.0rem;
+  transition: color 0.7s ease-in-out;
+}
+
+.navbar li:hover {
+  color: #58dbba; /* Color change on hover */
+  text-shadow: 0px 6px 10px rgba(0, 255, 200, 0.5);
+}
+
+.navbar li a:active {
+  color: #58dbba;
+  border-radius: 50px;
+  padding: 10px 30px;
+  border: #58dbba solid 2px;
+  text-shadow: 0px 6px 10px rgba(0, 255, 200, 0.3);
+}
+
+/* Active class for the currently active navigation item */
+.navbar .nav-item.active {
+  color: #58dbba;
+  border-radius: 50px;
+  padding: 10px 30px;
+  border: #58dbba solid 2px;
+  text-shadow: 0px 6px 10px rgba(0, 255, 200, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar li a {
+    margin-right: 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand {
+    margin-bottom: 0.5rem; /* Add spacing below the name */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.25rem 0;
+  }
+
+  .navbar li a {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem; /* Slightly smaller font size */
+  }
+}
